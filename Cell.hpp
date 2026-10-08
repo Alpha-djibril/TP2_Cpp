@@ -3,10 +3,9 @@
 
 
 class Cell{
-    protected:
-    TrajetSimple data;
-    TrajetSimple * next;
     public:
+    TrajetSimple data;
+    Cell * next;
     Cell();
-    Cell(TrajetSimple ts, TrajetSimple* ptr): data(ts), next(ptr){};
+    Cell(TrajetSimple ts, Cell* ptr): data(ts), next(ptr){};
 };
