@@ -5,11 +5,10 @@
 #include <Trajet.hpp>
 using namespace std;
 
-class catalogue {
+class Catalogue {
     Trajet* liste;
 
     void Ajouter(Trajet &trj);
     void Rechercher(string dep, string arr);
-    
-
+    void construire();
 };
