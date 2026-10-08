@@ -3,7 +3,7 @@
 #include "TrajetSimple.hpp"
 
 struct Liste{
-    TrajetSimple* head;
+    Cell* head;
 };
 
 struct Cell{
