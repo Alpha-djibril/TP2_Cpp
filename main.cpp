@@ -1,4 +1,4 @@
-#include <Catalogue>
+#include "Catalogue.hpp"
 
 int main(void){
     Catalogue cat;
@@ -6,11 +6,11 @@ int main(void){
 
     while(1) {
         printf("menu:\n");
-        printf("\t1: ajouter en tete\n");
+        printf("\t1: ajouter un trajet\n");
         printf("\t2: afficher le catalogue\n");
-        printf("\t3: rechercher une valeur\n");
-        printf("\t4: ajouter en queue\n");
-        printf("\t5: supprimer une valeur\n");
+        printf("\t3: rechercher un trajet\n");
+        printf("\t4: ajouter un trajet\n");
+        printf("\t5: supprimer un trajet\n");
         printf("\t0: quitter\n");
 
         int choix;
@@ -20,13 +20,13 @@ int main(void){
             case 0:
                 goto fin;
             case 1:
-                ajouter_en_tete(&list);
+                cat.Ajouter();
                 break;
             case 2:
-                afficher(&list);
+                cat.Afficher();
                 break;
             case 3:
-                rechercher(&list);
+                cat.rechercher();
                 break;
             case 4:
                 ajouter_en_queue(&list);
