@@ -6,8 +6,10 @@ class TrajetSimple : protected Trajet{
     protected:
     Transport Tr;
     public:
+    TrajetSimple();
     TrajetSimple(Transport t, string dep, string arr): Tr(t){
         this->Depart = dep;
         this->Destination = arr;
     };
+    void Afficher();
 };

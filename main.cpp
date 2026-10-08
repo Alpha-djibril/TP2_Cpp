@@ -1,16 +1,19 @@
 #include "Catalogue.hpp"
 
 int main(void){
-    Catalogue cat;
-    cat.construire();
+    TrajetSimple t1 = TrajetSimple(Voiture,"Paris","Bruxelles");
+    Cell c = Cell(t1,NULL);
+    Liste* l = new Liste(&c);
+    Catalogue *cat = new Catalogue(l);
+   
 
     while(1) {
         printf("menu:\n");
         printf("\t1: ajouter un trajet\n");
-        printf("\t2: afficher le catalogue\n");
+        /*printf("\t2: afficher le catalogue\n");
         printf("\t3: rechercher un trajet\n");
         printf("\t4: ajouter un trajet\n");
-        printf("\t5: supprimer un trajet\n");
+        printf("\t5: supprimer un trajet\n");*/
         printf("\t0: quitter\n");
 
         int choix;
@@ -23,19 +26,19 @@ int main(void){
                 cat.Ajouter();
                 break;
             case 2:
-                cat.Afficher();
+                //cat.Afficher();
                 break;
             case 3:
-                cat.rechercher();
+                //cat.rechercher();
                 break;
             case 4:
-                ajouter_en_queue(&list);
+                //ajouter_en_queue(&list);
                 break;
             case 5:
-                supprimer(&list);
+                //supprimer(&list);
                 break;
             case 6:
-                dupliquer(&list);
+                //dupliquer(&list);
                 break;
             default:
                 printf("choix incorrect\n");
