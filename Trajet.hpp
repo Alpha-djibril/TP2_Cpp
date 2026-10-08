@@ -5,20 +5,18 @@ using namespace std;
 
 
 class Trajet {
-    private:
+    protected:
         string Depart;
         string Destination;
        
     public:
         Trajet();
         Trajet(string depart, string destination): Depart(depart), Destination(destination){};
+        virtual ~Trajet()=0;
         void Afficher();
 
 };
 
-struct Cell {
-    Trajet cur;
-    Trajet* next;
-};
+
 
 

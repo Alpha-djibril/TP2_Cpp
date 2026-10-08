@@ -1,8 +1,14 @@
 #pragma once
 #include "Trajet.hpp"
+#include "TrajetSimple.hpp"
 
 struct Liste{
-    Trajet* head;
+    TrajetSimple* head;
+};
+
+struct Cell{
+    TrajetSimple data;
+    TrajetSimple * next;
 };
 
 class TrajetCompose : public Trajet{
