@@ -10,6 +10,7 @@ class Trajet {
         string Destination;
        
     public:
+        Trajet();
         Trajet(string depart, string destination): Depart(depart), Destination(destination){};
         void Afficher();
 
