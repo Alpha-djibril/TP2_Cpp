@@ -5,9 +5,9 @@
 class TrajetCompose : public Trajet{
     private:
     Liste listeTrajet;
-    
+
     public:
-    TrajetCompose(Liste liste): listeTrajet(liste){};
+    TrajetCompose(Liste liste, string dep, string arr): listeTrajet(liste){};
     void get_depart();
     void get_destination();
 };
