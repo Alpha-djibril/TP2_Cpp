@@ -5,7 +5,7 @@ int main(void){
     Cell c = Cell(t1,NULL);
      TrajetSimple t2 = TrajetSimple(Train,"Bruxelles","Berlin");
     Cell c2 = Cell(t2,NULL);
-    Liste* l = new Liste(&c);
+    Liste l = &c;
     Catalogue *cat = new Catalogue(l,0);
    
 
