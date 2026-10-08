@@ -1,12 +1,13 @@
 #include <Catalogue>
 
 int main(void){
-    elem* list = NULL;
+    Catalogue cat;
+    cat.construire();
 
     while(1) {
         printf("menu:\n");
         printf("\t1: ajouter en tete\n");
-        printf("\t2: afficher la liste\n");
+        printf("\t2: afficher le catalogue\n");
         printf("\t3: rechercher une valeur\n");
         printf("\t4: ajouter en queue\n");
         printf("\t5: supprimer une valeur\n");

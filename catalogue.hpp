@@ -10,6 +10,5 @@ class catalogue {
 
     void Ajouter(Trajet &trj);
     void Rechercher(string dep, string arr);
-    
-
+    void construire();
 };
