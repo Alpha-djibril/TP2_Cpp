@@ -1,19 +1,14 @@
 #include "Catalogue.hpp"
 
-Catalogue::Catalogue(Liste* l, int n=0){
-    this->listeTrajet = l;
-    this->nbEl = n;
-}
 
 void Catalogue::Ajouter(Cell* c){
-    if (this->nbEl == 0){
-        this->listeTrajet = new Liste(c);
+    c->next = NULL;
+    if (listeTrajet->head == NULL) {
+        listeTrajet->head = c;
+    } else {
+        Cell* cur = listeTrajet->head;
+        while (cur->next != NULL) cur = cur->next;
+        cur->next = c;
     }
-    Cell* tete;
-    tete =   this->listeTrajet->head ;
-    tete->next = c;
-    tete->next->data = c->data;
-    tete->next->next = NULL;
-    tete = tete->next;
-
+    nbEl++;
 }

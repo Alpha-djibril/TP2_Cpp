@@ -3,8 +3,10 @@
 int main(void){
     TrajetSimple t1 = TrajetSimple(Voiture,"Paris","Bruxelles");
     Cell c = Cell(t1,NULL);
+     TrajetSimple t2 = TrajetSimple(Train,"Bruxelles","Berlin");
+    Cell c2 = Cell(t2,NULL);
     Liste* l = new Liste(&c);
-    Catalogue *cat = new Catalogue(l);
+    Catalogue *cat = new Catalogue(l,0);
    
 
     while(1) {
@@ -23,7 +25,10 @@ int main(void){
             case 0:
                 goto fin;
             case 1:
-                cat.Ajouter();
+                (*cat).Ajouter(&c2);
+                c.data.Afficher();
+                c2.data.Afficher();
+                c2.next->data.Afficher();
                 break;
             case 2:
                 //cat.Afficher();
