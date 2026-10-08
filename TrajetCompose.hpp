@@ -1,15 +1,6 @@
 #pragma once
-#include "Trajet.hpp"
-#include "TrajetSimple.hpp"
+#include "Liste.hpp"
 
-struct Liste{
-    Cell* head;
-};
-
-struct Cell{
-    TrajetSimple data;
-    TrajetSimple * next;
-};
 
 class TrajetCompose : public Trajet{
     private:
