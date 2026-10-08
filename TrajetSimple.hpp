@@ -1,6 +1,6 @@
 #pragma once
-#include "Transport.h"
-#include "Trajet.h"
+#include "Transport.hpp"
+#include "Trajet.hpp"
 
 class TrajetSimple : public Trajet{
     private:
